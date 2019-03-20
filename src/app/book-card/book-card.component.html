@@ -1,0 +1,20 @@
+<div (mouseover)="hover=true" (mouseleave)="hover=false">
+  <p-card *ngIf="!hover" [style]="{height: height}" header="{{book.title}}" subheader="{{book.author}}"
+    styleClass="ui-card-shadow">
+    <p-header>
+      <img src="assets/placeholder-150.png">
+    </p-header>
+    <div>
+      {{book.summary}}
+    </div>
+  </p-card>
+  <p-card [style]="{height: height, background: 'white'}" *ngIf="hover" [style]="{height: height}">
+    <div>
+      {{book.title}}
+    </div>
+    <div>
+      {{book.summary}}
+    </div>
+    <i class="pi pi-folder-open" style="font-size: 3em"></i>
+  </p-card>
+</div>

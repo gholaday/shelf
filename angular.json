@@ -25,7 +25,10 @@
               "src/favicon.512x512.png"
             ],
             "styles": [
-              "styles.less"
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/omega/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/styles.less"
             ],
             "scripts": []
           },
@@ -104,7 +107,12 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "less"
+      "styleext": "less",
+      "spec": false
+    },
+    "@schematics/angular:class": {
+      "path": "src/models",
+      "spec": false
     },
     "@schematics/angular:directive": {
       "prefix": "app"

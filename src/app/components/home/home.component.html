@@ -1,5 +1,6 @@
-<div class="container">
-  <h1 class="title">
-    What up
-  </h1>
+<div class="p-grid">
+  <div class="p-col" *ngFor="let book of books">
+    <app-book-card [book]="book">
+    </app-book-card>
+  </div>
 </div>
